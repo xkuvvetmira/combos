@@ -9,20 +9,52 @@
                 <h2>Hoşgeldiniz.</h2>
                 <h3>Toplam Combo Sayısı: 5</h3>
                 <h3>En Çok Combosu Olan Kullanıcı: <h2 class="author2">Kuvvetmira (3)</h2></h3>
+                <div id="datetime" style="text-align: center; color: rgb(138, 138, 138); text-shadow: 1px 1px 10px white; font-family:Verdana, Geneva, Tahoma, sans-serif"></div>
                <h3>▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂</h3>
                 <table>
                 <thead>
                     <th>🌐 Site</th>
                     <th>👤 Lines</th>
-                    <th>✅ Kalite</th>
+                    <th>💯 Kalite</th>
+                    <th>✅ Tahmini Hit</th>
+                    <th>⏰ Tarih</th>
                     <th>✍️ Author</th>
                     <th><img width="50" height="40" src="https://www.halock.com/wp-content/uploads/2020/02/Download-Button-Free-PNG-Image.png"></th>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>spotify.com</td>
+                        <td>25000</td>
+                        <td>NQ</td>
+                        <td>480-580</td>
+                        <td>05.07.2024</td>
+                        <td class="author">By_Mahir</td>
+                        <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/netflix.com.txt" style="text-decoration: none; color: white;">İndir!</a></td>
+                     </tr>
+                    <tr>
+                        <td>blutv.com</td>
+                        <td>6000</td>
+                        <td>NQ</td>
+                        <td>350-450</td>
+                        <td>05.07.2024</td>
+                        <td class="author">ArlexinWW</td>
+                        <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/netflix.com.txt" style="text-decoration: none; color: white;">İndir!</a></td>
+                     </tr>
+                    <tr>
+                        <td>disneyplus.com</td>
+                        <td>10000</td>
+                        <td>NQ</td>
+                        <td>300-400</td>
+                        <td>07.07.2024</td>
+                        <td class="author">Seidq</td>
+                        <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/netflix.com.txt" style="text-decoration: none; color: white;">İndir!</a></td>
+                     </tr>
+                    <tr>
                        <td>netflix.com</td>
                        <td>28726</td>
-                       <td>NQ</td>
+                       <td>BQ</td>
+                       <td>50-150</td>
+                       <td>06.07.2024</td>
                        <td class="author">Kuvvetmira</td>
                        <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/netflix.com.txt" style="text-decoration: none; color: white;">İndir!</a></td>
                     </tr>
@@ -30,6 +62,8 @@
                         <td>disneyplus.com</td>
                         <td>4935</td>
                         <td>NQ</td>
+                        <td>100-190</td>
+                        <td>06.07.2024</td>
                         <td class="author">Kuvvetmira</td>
                         <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/disneyplus.com.txt" style="text-decoration: none; color: white;">İndir!</a></td>
                      </tr>
@@ -37,6 +71,8 @@
                         <td>Steam App/Site</td>
                         <td>29326</td>
                         <td>NQ</td>
+                        <td>200-340</td>
+                        <td>06.07.2024</td>
                         <td class="author">Kuvvetmira</td>
                         <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/steam.txt" style="text-decoration: none; color: white;">İndir!</a></td>
                      </tr>
@@ -44,6 +80,8 @@
                         <td>Turkish Mailpass</td>
                         <td>4000</td>
                         <td>NQ</td>
+                        <td>Siteden Siteye Değişir</td>
+                        <td>06.07.2024</td>
                         <td class="author">Seidq</td>
                         <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/turkish_mailpass.txt" style="text-decoration: none; color: white;">İndir!</a></td>
                      </tr>
@@ -51,13 +89,40 @@
                         <td>Exxen Telpass</td>
                         <td>8100</td>
                         <td>NQ</td>
+                        <td>150-300</td>
+                        <td>06.07.2024</td>
                         <td class="author">EFETR</td>
                         <td class="indir"><a href="https://raw.githubusercontent.com/xkuvvetmira/combos/main/combos/Exxen%20Tel.txt" style="text-decoration: none; color: white;">İndir!</a></td>
                      </tr>
                 </tbody>
                 </table>
                 </tablo>
-            </div>
+                <script>
+                    function getDateTime() {
+                        const apiUrl = 'https://worldtimeapi.org/api/timezone/Europe/Istanbul';
+                        fetch(apiUrl)
+                            .then(response => response.json())
+                            .then(data => {
+                                const datetime = new Date(data.datetime);
+                                const formattedDateTime = datetime.toLocaleString('en-GB', {
+                                    year: 'numeric',
+                                    month: '2-digit',
+                                    day: '2-digit',
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                    second: '2-digit'
+                                }).replace(/\//g, '.');
+                
+                                const datetimeElement = document.getElementById('datetime');
+                                datetimeElement.textContent = formattedDateTime;
+                            })
+                            .catch(error => {
+                                console.error('API ile ilgili bir hata oluştu:', error);
+                            });
+                    }
+                    getDateTime();
+                    setInterval(getDateTime, 1000);
+                </script>                                
         </body>
     </head>
 </html>
