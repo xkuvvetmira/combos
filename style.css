@@ -1,0 +1,98 @@
+.kutu {
+    background-color: rgba(0, 0, 0, 0.767);
+    border-radius: 19px;
+    border: 1px;
+    box-shadow: 2px 2px 20px rgb(162, 0, 255);
+    padding: 25px;
+    width: 700px;
+    height: auto;
+    margin: auto;
+}
+th {
+    color: white;
+    font-size: 23px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+td {
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+table {
+    width: 569px;
+    margin: auto;
+    border-collapse: collapse;
+
+}
+.moving-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes slide-right-to-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.moving-text::before {
+    content: "Html / Css Coding By KuvvetmiraㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤForum Site: crackturkey.comㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDiscord: @kuvvetmira.sagoㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤThanks for combo makers";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, transparent 100%);
+    animation: reveal-text 15s linear infinite;
+}
+
+@keyframes reveal-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-280%);
+    }
+}
+
+h1, h2, h3 {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 20px rgb(124, 124, 124);
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: black;
+    background-image: url(https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?cs=srgb&dl=pexels-minan1398-813269.jpg&fm=jpg);
+    background-repeat: repeat-y;
+    background-size: 1370px 990px;
+}
+.indir {
+    background-color: rgb(22, 135, 150);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    width: 56px;
+    transition: 580ms;
+}
+.indir:hover {
+    box-shadow: 1px 1px 15px lightgreen;
+    cursor: pointer;
+}
+.author {
+    color: red;
+    text-shadow: 1px 1px 20px rgb(255, 0, 0);
+    font-style: italic;
+}
+.author2 {
+    color: aqua;
+    text-shadow: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
